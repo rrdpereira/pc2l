@@ -17,22 +17,22 @@ Description: This is the lanch the conversion of Realsense Camera D435i point cl
       <remap from="scan" to="$(arg camera)/scan"/>
       <rosparam>
         target_frame: camera_link
-        transform_tolerance: 0.01
-        min_height: 0.0
-        max_height: 1.0
-        angle_min: -1.5708
-        angle_max: 1.5708
+        transform_tolerance: 0.05
+        min_height: 0.200
+        max_height: 0.210
+        angle_min: -0.55
+        angle_max: 0.55
         angle_increment: 0.0087
         scan_time: 0.3333
-        range_min: 0.45
-        range_max: 4.0
-        use_inf: true
-        inf_epsilon: 1.0
+        range_min: 0.3
+        range_max: 2.0
+        use_inf: false
+        #inf_epsilon: 1.0
         #concurrency_level affects number of pc queued for processing and the number of threadsused
         # 0: Detect number of cores
         # 1: Single threaded
         # 2: inf : Parallelism level
-        concurrency_level: 0
+        concurrency_level: 1
       </rosparam>
     </node>
 </launch>
